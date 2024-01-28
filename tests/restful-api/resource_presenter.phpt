@@ -50,6 +50,7 @@ namespace {;
             $mockHttpRequest->shouldReceive('isAjax');
             $mockHttpRequest->shouldReceive('isMethod');
             $mockHttpRequest->shouldReceive('getHeader');
+            $mockHttpRequest->shouldReceive('getMethod')->andReturn('GET');
 
             $mockHttpResponse = \Mockery::mock(Nette\Http\IResponse::class);
             $mockHttpResponse->shouldReceive('isSent');
