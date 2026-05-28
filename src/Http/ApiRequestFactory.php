@@ -43,7 +43,7 @@ class ApiRequestFactory
 
         return new Request(
             $url,
-            $request->getPost(),
+            $request->getPost() ?? [],
             $request->getFiles(),
             $request->getCookies(),
             $request->getHeaders(),

@@ -35,7 +35,7 @@ namespace {;
             $mockFactory->shouldReceive('fromGlobals')->andReturn($mockRequest);
             $mockRequest->shouldReceive('getUrl')->andReturn(new UrlScript('/'));
             $mockRequest->shouldReceive('getQuery')->andReturn('', 'b', 'b');
-            $mockRequest->shouldReceive('getPost')->andReturn(null);
+            $mockRequest->shouldReceive('getPost')->andReturn([]);
             $mockRequest->shouldReceive('getCookies')->andReturn([]);
             $mockRequest->shouldReceive('getFiles')->andReturn([]);
             $mockRequest->shouldReceive('getHeaders')->andReturn([]);
